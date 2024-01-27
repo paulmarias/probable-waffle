@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
 
   get 'profile', to: 'users#show'
-  resources :users, :news 
+  resources :news 
 
   match '/users', to: 'users#index', via: :all 
   match '/users/:id', to: "users#show", via: :get 
