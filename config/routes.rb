@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  get 'users/index'
+  #get 'users/index'
   
-
+  root "news#index" 
   get 'profile', to: 'users#show'
   resources :news 
 
   match '/users', to: 'users#index', via: :all 
   match '/users/:id', to: "users#show", via: :get 
   #devise_for :users, :path_prefix => 'd'
-  resources :users, :only => [:show]
+  resources :users
   
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

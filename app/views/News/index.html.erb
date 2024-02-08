@@ -1,0 +1,9 @@
+<h1>The Manticore</h1>
+<h3>the Manticore Missive</h3>
+<div>
+<% @news.each do |news| %>
+    <div>
+    <h2><%= news.title %></h2>
+    <%= news.body %>
+    <div>
+<% end %>
