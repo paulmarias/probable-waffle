@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :members, controllers: {
+    sessions: 'member/sessions',
+    registrations: 'member/sessions'
+  }
+  devise_for :admins, controllers: {
+    sessions: 'admin/sessions',
+    registrations: 'admin/sessions'
+  }
+  devise_for :users
+  root 'pages/home'
+  get 'pages/admin'
   #get 'users/index'
   
-  root "news#index" 
+  #root "news#index" 
   get 'profile', to: 'users#show'
   resources :news 
 
