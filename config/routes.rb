@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     registrations: 'admin/sessions'
   }
   devise_for :users
-  root 'pages/home'
+  root 'pages/home#index'
   get 'pages/admin'
   #get 'users/index'
   
